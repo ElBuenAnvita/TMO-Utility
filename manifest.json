@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "TMO Utility",
+  "description": "TuMangaOnline utilites",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/news/*/cascade", "*://*/news/*/paginated/*", "https://lectortmo.com/viewer/*/cascade", "https://lectortmo.com/viewer/*/paginated/*"],
+      "js": [ "content.js" ]
+    }
+  ]
+}
