@@ -1,8 +1,11 @@
 {
   "manifest_version": 3,
   "name": "TMO Utility",
-  "description": "TuMangaOnline utilites",
-  "version": "1.0",
+  "description": "Utilidades para el lector de ZonaTMO (TuMangaOnline)",
+  "version": "1.1",
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -12,7 +15,13 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*/news/*/cascade", "*://*/news/*/paginated/*", "https://lectortmo.com/viewer/*/cascade", "https://lectortmo.com/viewer/*/paginated/*"],
+      "matches": [
+        "*://*/news/*/cascade",
+        "*://*/news/*/paginated/*",
+        "https://zonatmo.com/viewer/*/cascade",
+        "https://zonatmo.com/viewer/*/paginated",
+        "https://zonatmo.com/viewer/*/paginated/*"
+      ],
       "js": [ "content.js" ]
     }
   ]

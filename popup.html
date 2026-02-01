@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Menu</title>
+    <title>TMO Utility Menu</title>
+    <style>
+        body {
+            width: 280px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 15px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        h1 {
+            font-size: 16px;
+            margin-top: 0;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .option-group {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        label {
+            font-size: 13px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 10px;
+            color: #6c757d;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <h1>TMO Utility</h1>
-Automatically replace TMO external links to lectortmo.com viewer.
+
+<div class="option-group">
+    <input type="checkbox" id="redirectSwitch">
+    <label for="redirectSwitch">Redirección automática a ZonaTMO</label>
+</div>
+
+<div class="option-group">
+    <input type="checkbox" id="autoScrollSwitch">
+    <label for="autoScrollSwitch">Subir automáticamente al pasar página</label>
+</div>
+
+<div class="footer">Made with ❤️ @ElBuenAnvita</div>
+
+<script src="popup.js"></script>
 </body>
 </html>
